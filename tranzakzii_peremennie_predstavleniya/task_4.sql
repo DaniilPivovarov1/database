@@ -1,0 +1,1 @@
+DELETE FROM products WHERE id NOT IN (SELECT * FROM (SELECT id FROM products ORDER BY created_at DESC LIMIT 5) t);
